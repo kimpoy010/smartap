@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>FAQs</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item *ngFor="let q of questions; let i = index" lines="none" (click)="goToFAQ(i)">
+			<ion-label>{{q.question}}</ion-label>
+			<ion-icon slot="end" ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+		</ion-item>
+	</ion-list>
+</ion-content>

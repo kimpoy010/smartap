@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Family Info</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-item lines="none">
+	  <ion-label>
+	    Family Name
+	  </ion-label>
+	  <ion-text slot="end">
+	  	MyFamily
+	  </ion-text>
+	</ion-item>
+
+	<ion-item lines="none">
+	  <ion-label>
+	   	Location
+	  </ion-label>
+	  <ion-text slot="end">
+	  	Cabanatuan City,3100
+	  </ion-text>
+	</ion-item>
+
+	<ion-item-divider>
+		<ion-text>Family Members</ion-text>
+	</ion-item-divider>
+
+	<ion-item lines="none" *ngFor="let mem of members">
+	  <ion-avatar slot="start">
+	    <img src="{{constant.apiURL+'/'+mem.avatar}}">
+	  </ion-avatar>
+	  <ion-label>
+	  	<h2>{{mem.username}}</h2>
+	  	<h4>{{mem.email}}</h4>
+	  </ion-label>
+	  <ion-text slot="end">Administrator</ion-text>
+	</ion-item>
+
+	<ion-item-divider></ion-item-divider>
+	<ion-item lines="none" (click)="goToAddFamily(id)">
+	  <ion-label>
+	   	<strong>Add Member</strong>
+	  </ion-label>
+	</ion-item>
+	<ion-item-divider></ion-item-divider>
+
+	<ion-item lines="none" *ngFor="let room of rooms">
+	    <ion-label>{{room.room_name}}</ion-label>
+	    <ion-toggle slot="end" color="success" checked></ion-toggle>
+	</ion-item>
+
+	<ion-item lines="none" (click)="presentModal()">
+	  <ion-label>
+	   	<strong>Add Room</strong>
+	  </ion-label>
+	</ion-item>
+</ion-content>

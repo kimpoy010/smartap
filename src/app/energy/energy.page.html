@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Energy Report</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-item lines="none">
+		<ion-label>Date Added</ion-label>
+		<ion-text class="small-text" slot="end">Nov 19, 2019</ion-text>
+	</ion-item>
+
+	<ion-item lines="none">
+		<ion-label>Time Added</ion-label>
+		<ion-text class="small-text" slot="end">08:43 AM</ion-text>
+	</ion-item>
+
+	<ion-item-divider></ion-item-divider>
+
+	<ion-item lines="none">
+		<ion-label>On Duration</ion-label>
+		<ion-text class="small-text" slot="end">8h 45m 22s</ion-text>
+	</ion-item>
+
+	<ion-item lines="none">
+		<ion-label>Date Last Off</ion-label>
+		<ion-text class="small-text" slot="end">Nov. 18, 2019</ion-text>
+	</ion-item>
+
+	<ion-item-divider><span class="small-text">Energy Rates</span></ion-item-divider>
+	<ion-item lines="none">
+		<ion-label>Rated Power<span class="small-text"> (Watts)</span></ion-label>
+		<ion-input class="small-text" slot="end" placeholder="Watts of plugged device"> </ion-input>
+	</ion-item>
+
+	<ion-item>
+		<ion-label>Cost per kWh <span class="small-text">(PHP)</span></ion-label>
+		<ion-input class="small-text" slot="end" placeholder="kWh rate"></ion-input>
+	</ion-item>
+
+	<ion-item-divider><span class="small-text">Energy Consumption</span></ion-item-divider>
+	<ion-item lines="none">
+		<ion-label>Power Consumption</ion-label>
+		<ion-text class="small-text" slot="end">0.027kWh</ion-text>
+	</ion-item>
+
+	<ion-item lines="none">
+		<ion-label>Cost of Consumption</ion-label>
+		<ion-text class="small-text" slot="end">0.122</ion-text>
+	</ion-item>
+
+	<p class="small-text center-text notes">Please note that this computation is just an estimate and not the actual cost of your power consumption. This is just an overview of how much you will expect to pay to your electricity provider.</p>
+</ion-content>

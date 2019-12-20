@@ -1,0 +1,42 @@
+<ion-header >
+  <ion-toolbar lines="none">
+    <ion-title></ion-title>
+  </ion-toolbar>	
+</ion-header>
+
+<ion-content>
+	<ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+	   <ion-refresher-content></ion-refresher-content>
+	 </ion-refresher>
+	<ion-item lines="none" (click)="goToPersonal()">
+	  <ion-thumbnail slot="start">
+	    <img src="{{image}}">
+	  </ion-thumbnail>
+	  <ion-label>
+	  	<h1>{{username == "" ? 'Tap to set Username' : username}}</h1>
+	  	<h2>{{userData.email}}</h2>
+	  </ion-label>
+	</ion-item>
+	<ion-item-divider></ion-item-divider>
+	<ion-item lines="none" (click)="goToFamily()">
+		<ion-icon name='home' slot="start" color="primary"></ion-icon>
+	   	<ion-label>Family Management</ion-label>
+	</ion-item>
+
+	<ion-item lines="none" (click)="goToHelp()">
+		<ion-icon name='book' slot="start" color="primary"></ion-icon>
+	   	<ion-label>Help Center</ion-label>
+	</ion-item>
+
+	<ion-item-divider></ion-item-divider>
+
+	<ion-item lines="none" (click)="goToSettings()">
+		<ion-icon name='cog' slot="start" color="primary"></ion-icon>
+	   	<ion-label>Settings</ion-label>
+	</ion-item>
+	<ion-item-divider></ion-item-divider>
+	<ion-item lines="none" (click)="logout()">
+		<ion-icon name='log-out' slot="start" color="primary"></ion-icon>
+	   	<ion-label>Sign Out</ion-label>
+	</ion-item>
+</ion-content>

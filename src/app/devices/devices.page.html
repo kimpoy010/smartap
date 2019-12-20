@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Devices</ion-title>
+    <ion-buttons slot="end">
+    <!--  <ion-button (click)="presentPopover($event)"><ion-icon name="person" color="dark"></ion-icon></ion-button> -->
+     <ion-button (click)="presentModal()"> <ion-icon name="add" color="dark"></ion-icon></ion-button>
+   	</ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+	<ion-list>
+	  <ion-item lines="none" *ngIf="userData.email === 'test@gmail.com' && deviceAdd === '1'">
+	    <ion-avatar slot="start">
+	      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+	    </ion-avatar>
+	    <ion-label (click)="gotoDevice()">
+	    	<h2>Smart Plug</h2>
+	    	<h4>SSH0001</h4>
+	    </ion-label>
+	     <ion-toggle slot="end" [(ngModel)]="status" (ionChange)="switchToggle()" checked="{{status}}"></ion-toggle>
+	  </ion-item>
+	</ion-list>
+</ion-content>

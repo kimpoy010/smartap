@@ -1,0 +1,8 @@
+{
+  "name": "SakuraSmart",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "fe8082f8"
+}

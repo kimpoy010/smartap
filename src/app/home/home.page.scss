@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+
+.app-content{
+	// background-image: url('../../assets/imgs/bg.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+.logo-area{
+	text-align: center;
+	padding-top: 100px;
+}
+
+.button-area{
+	text-align: center;
+	position: absolute;
+	bottom: 25%;
+	width: 100vw;
+}
+
+ion-button, strong, ion-back-button{
+	font-family: 'Questrial', sans-serif !important;
+}

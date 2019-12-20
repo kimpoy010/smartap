@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Automation Settings</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="padding">
+	<ion-item lines="none">
+	  <ion-label position="floating">Name</ion-label>
+	  <ion-input [(ngModel)]="formData.name"></ion-input>
+	</ion-item>
+	<ion-item-divider></ion-item-divider>
+	<ion-item lines="none">
+		<ion-label>Select Condition</ion-label>
+		<ion-select [selectedText]="conditionValue" okText="Okay" [(ngModel)]="conditionValue" (ionChange)="changeCondition()" cancelText="Dismiss">
+	      <ion-select-option value="weather">Weather</ion-select-option>
+	      <ion-select-option value="temperature">Temperature</ion-select-option>
+	      <ion-select-option value="schedule">Schedule</ion-select-option>
+	      <ion-select-option value="location">Location</ion-select-option>
+	    </ion-select>
+	</ion-item>
+
+	<ion-item lines="none" *ngIf="conditionValue === 'temperature'">
+		<ion-label position="floating">Operator</ion-label>
+		<ion-select [selectedText]="operatorValue" okText="Okay" [(ngModel)]="operatorValue" (ionChange)="changeOperator()" cancelText="Dismiss">
+	      <ion-select-option value="equal to">(equal to) <strong>=</strong></ion-select-option>
+	      <ion-select-option value="less than">(less than) <strong><</strong></ion-select-option>
+	      <ion-select-option value="more than">(more than) <strong>></strong></ion-select-option>
+	    </ion-select>
+	</ion-item>
+
+	<ion-item  *ngIf="conditionValue === 'temperature'">
+		<ion-label position="floating">Temperature Threshold</ion-label>
+		<ion-input type="number" [(ngModel)]="compareValue"></ion-input>
+	</ion-item>
+
+	<ion-item lines="none" *ngIf="conditionValue === 'schedule'">
+	  <ion-label>Set Time</ion-label>
+	  <ion-datetime [(ngModel)]="compareValue" displayFormat="h:mm A"></ion-datetime>
+	</ion-item>
+
+	<ion-item lines="none" *ngIf="conditionValue === 'location'">
+	  <ion-label>Distance from Home</ion-label>
+	  <ion-input type="number" class="text-right" [(ngModel)]="compareValue" placeholder="in meters"></ion-input>
+	</ion-item>
+
+	
+
+	<ion-item-divider></ion-item-divider>
+
+	<ion-item lines="none">
+		<ion-label>Select Room</ion-label>
+		<ion-select  okText="Okay" cancelText="Dismiss" [(ngModel)]="roomValue">
+	      <ion-select-option value="Living Room">Living Room</ion-select-option>
+	      <ion-select-option value="Bedroom">Bedroom</ion-select-option>
+	      <ion-select-option value="Kitchen">Kitchen</ion-select-option>
+	      <ion-select-option value="Bathroom">Bathroom</ion-select-option>
+	    </ion-select>
+	</ion-item>
+
+	<ion-item lines="none">
+		<ion-label>Select Device</ion-label>
+		<ion-select  okText="Okay" cancelText="Dismiss" [(ngModel)]="deviceValue">
+	      <ion-select-option value="All Device">All Device</ion-select-option>
+	      <ion-select-option value="5DE05BC01054C">5DE05BC01054C</ion-select-option>
+	    </ion-select>
+	</ion-item>
+
+	<ion-item-divider></ion-item-divider>
+	<ion-item lines="none">
+		<ion-label position="floating">Select Action</ion-label>
+		<ion-select  okText="Okay" cancelText="Dismiss" [(ngModel)]="actionValue">
+	      <ion-select-option value="on"><strong>ON</strong></ion-select-option>
+	      <ion-select-option value="off"><strong>OFF</strong></ion-select-option>
+	    </ion-select>
+	</ion-item>
+
+	<div class="button-padding">
+		<ion-button color="primary" expand="block" (click)="setAutomation()">Save</ion-button>
+	</div>
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Set Condition</ion-title>
+    <ion-buttons slot="end">
+    	<ion-button color="dark" (click)="closeModal()">Done</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+    	<ion-button color="dark" (click)="cancelModal()">Cancel</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="weather-options" *ngIf="factor === 'weather' ">
+		<ion-radio-group>
+			<ion-list-header>
+		      <ion-label>Weather Condition</ion-label>
+		    </ion-list-header>
+	    	<ion-item>
+	          <ion-label>Sunny</ion-label>
+	          <ion-radio slot="end" value="sunny" (ionSelect)="weatherSelect('sunny')"></ion-radio>
+	        </ion-item>
+	        <ion-item>
+	          <ion-label>Cloudy</ion-label>
+	          <ion-radio slot="end" value="cloudy" (ionSelect)="weatherSelect('cloudy')"></ion-radio>
+	        </ion-item>
+	        <ion-item>
+	          <ion-label>Rainy</ion-label>
+	          <ion-radio slot="end" value="rainy" (ionSelect)="weatherSelect('rainy')"></ion-radio>
+	        </ion-item>
+	        <ion-item>
+	          <ion-label>Snowy</ion-label>
+	          <ion-radio slot="end" value="snowy" (ionSelect)="weatherSelect('snowy')"></ion-radio>
+	        </ion-item>
+	        <ion-item>
+	          <ion-label>Hazy</ion-label>
+	          <ion-radio slot="end" value="hazy" (ionSelect)="weatherSelect('hazy')"></ion-radio>
+	        </ion-item>
+		</ion-radio-group>
+	</div>
+</ion-content>

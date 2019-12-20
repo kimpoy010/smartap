@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Room Assignment</ion-title>
+    <ion-buttons slot="start">
+    	<ion-button color="dark" (click)="dismiss()">Close</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+    	<ion-button color="dark" (click)="dismiss()">Done</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+	  <ion-radio-group>
+	    <ion-list-header>
+	      Select a Room
+	    </ion-list-header>
+
+	    <ion-item>
+	      <ion-label>Living Room</ion-label>
+	      <ion-radio value="cord"></ion-radio>
+	    </ion-item>
+
+	    <ion-item>
+	      <ion-label>Bedroom</ion-label>
+	      <ion-radio value="duesenberg"></ion-radio>
+	    </ion-item>
+
+	    <ion-item>
+	      <ion-label>Kitchen</ion-label>
+	      <ion-radio value="hudson"></ion-radio>
+	    </ion-item>
+
+	    <ion-item>
+	      <ion-label>Bathroom</ion-label>
+	      <ion-radio value="packard"></ion-radio>
+	    </ion-item>
+	  </ion-radio-group>
+	</ion-list>
+</ion-content>

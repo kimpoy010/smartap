@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Automation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+	    <ion-refresher-content></ion-refresher-content>
+	  </ion-refresher>
+	<div class="autolist-none" *ngIf="autoList === null">
+		<div class="image-step">
+			<img src="../assets/imgs/steps/circle.PNG" width="150">
+		</div>
+
+		<div class="instructions">
+			Control multiple devices with one tap, set an automatic schedule or through voice command.
+		</div>
+	</div>
+
+	<div class="autolist" *ngIf="autoList !== null">
+		<ion-list>
+		  <ion-item lines="none" *ngFor="let auto of autoList">
+		    <ion-avatar slot="start">
+		      <img src="https://gravatar.com/avatar?d=identicon">
+		    </ion-avatar>
+		    <ion-label>
+		    	<h2>{{auto.auto_name}}</h2>
+		    	<h4>{{auto.condition}}</h4>
+		    	<h4>{{auto.operator}}</h4>
+		    	<h4>{{auto.compare}}</h4>
+		    </ion-label>
+		    <ion-text slot="end">{{auto.action}}</ion-text>
+		  </ion-item>
+		</ion-list>
+	</div>
+	
+
+	<div class="button">
+		<ion-button shape="round" (click)="goToAutomate()" color="dark">Add Automation</ion-button>
+	</div>
+</ion-content>

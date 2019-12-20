@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="{{bgColor}}">
+    <ion-title>Device Controls</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="{{bgColor}}">
+	<div class="device-info">
+		<label>Device ID: </label><strong>{{deviceInfo.device_name}}</strong>
+	</div>
+	<div class="switch">
+		<img src="../../assets/imgs/{{state}}.png" width="150" (click)="switchToggle()">
+		<h2>Device is: <span class="state">{{state}}</span></h2>
+	</div>
+	<div class="sched-button">
+		<ion-button shape="round" expand="block" (click)="presentModal()">Scheduled Power On/Off</ion-button>
+		<ion-button shape="round" color="bgColor" expand="block" (click)="goToEnergy()">Energy Report</ion-button>
+		<ion-button shape="round" color="bgColor" expand="block" (click)="roomAssignmentModal()">Change Room Assignment</ion-button>
+	</div>
+</ion-content>

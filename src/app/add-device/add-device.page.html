@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-button fill="clear" color="dark" slot="end" (click)="closeMe()">
+  	  Close
+  	</ion-button>
+    <ion-title>Add New Device</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+	<ion-input placeholder="Enter Device ID"></ion-input>
+	<ion-button (click)="presentAlert()">Search Device ID</ion-button>
+
+	<p class="note">* Device ID can be found in front of the manual inside the box that is written in bold letters.</p>
+</ion-content>

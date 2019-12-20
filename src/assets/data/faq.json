@@ -1,0 +1,19 @@
+[
+	{
+		"question":"Failed to connect device?",
+		"answer" : "Please note when adding device: <br><br><br>1. Is the device powered on?<br><br>2. Is the device in Access Point (AP) mode? 3. Are you connected to the device's Acces Point?<br><br> 4. The wifi SSID and Password supplied are correct<br><br>5. Make sure you are connecting to the 2.4GHz wifi signal of your router.<br><br>6. Make sure DHCP is eanabled on the router"
+	},
+	{
+		"question" : "How to add device on app?",
+		"answer" : ""
+	},
+	{
+		"question" :"How to share the device to family members?",
+		"answer" : ""
+	},
+	{
+		"question" : "How to connect to Google Home and Alexa Echo Dot speakers?",
+		"answer" : ""
+	}
+	
+]

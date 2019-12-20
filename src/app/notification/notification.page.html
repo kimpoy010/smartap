@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Notification Settings</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+	  <ion-item lines="none">
+	    <ion-label (click)="gotoDevice()">
+	    	<h2>Enable Notifications</h2>
+	    </ion-label>
+	    <ion-toggle slot="end" checked></ion-toggle>
+	  </ion-item>
+	  <ion-item-divider></ion-item-divider>
+	  <ion-item lines="none">
+	    <ion-label (click)="gotoDevice()">
+	    	<h2>Family Notifications</h2>
+	    </ion-label>
+	    <ion-toggle slot="end"></ion-toggle>
+	  </ion-item>
+
+	  <ion-item lines="none">
+	    <ion-label (click)="gotoDevice()">
+	    	<h2>Bulletin</h2>
+	    </ion-label>
+	    <ion-toggle slot="end"></ion-toggle>
+	  </ion-item>
+	</ion-list>
+</ion-content>

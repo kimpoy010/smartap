@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-buttons slot="end">
+     	<ion-button (click)="addDevice()"> <ion-icon name="add" color="dark"></ion-icon></ion-button>
+   	</ion-buttons>
+
+   	<ion-buttons slot="start">
+     	<ion-select>
+     		 <ion-select-option *ngFor="let fam of families" value="{{fam.id}}" [selected]="fam.id == defaultFamilyID">{{fam.family_name}}</ion-select-option>
+     	</ion-select>
+   	</ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+	<ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+	    <ion-refresher-content></ion-refresher-content>
+	  </ion-refresher>
+	<div class="weather-container">
+		<img src="../assets/imgs/weather.png">
+	</div>
+	
+	<div class="button-container" *ngIf="devices.length < 1 ">
+		<img src="../assets/imgs/steps/circle.PNG" width="150" >
+		<p>No devices connected.</p>
+		<ion-button shape="round"  color="primary" (click)="addDevice()">Add Device</ion-button>
+	</div>
+	
+	<ion-list>
+	  <ion-item lines="none" *ngFor="let dev of devices">
+	    <ion-avatar slot="start">
+	      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+	    </ion-avatar>
+	    <ion-label (click)="gotoDevice(dev.id)">
+	    	<h2>{{dev.device_name}}</h2>
+	    	<h4>{{dev.device_id}}</h4>
+	    </ion-label>
+	     <ion-toggle slot="end" [(ngModel)]="status" (ionChange)="switchToggle()" [checked]="checkStatus(status)"></ion-toggle>
+	  </ion-item>
+	</ion-list>
+</ion-content>

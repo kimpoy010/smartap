@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Connect to Wifi</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="padding">
+	<div class="image-step">
+		<img src="../../assets/imgs/steps/connect.PNG">
+	</div>
+	
+	<div class="instruction">
+		<p>
+			Connect your phone to wifi signal of the smart plug.<br>
+			(Only supports 2.4GHz Wifi)
+		</p>
+	</div>
+
+	<div class="button-container">
+		<ion-button (click)="gotoNxt()" color="dark">NEXT STEP</ion-button>
+	</div>
+</ion-content>

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Questrial', sans-serif !important;
+}
+
+ion-title,ion-back-button{
+	font-family: 'Questrial', sans-serif !important;
+}
+
+.image-step{
+	margin-top: 50px;
+	text-align: center;
+}
+
+ion-label{
+	font-family: 'Questrial', sans-serif !important;
+}
+.instruction{
+	font-family: 'Questrial', sans-serif !important;
+	text-align: center;
+}
+
+.button-container{
+	font-family: 'Questrial', sans-serif !important;
+	text-align: center;
+	margin-top: 25px;
+}
+
+.success{
+	color: green !important;
+}

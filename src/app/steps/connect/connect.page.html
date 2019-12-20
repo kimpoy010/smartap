@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Enter Wifi Details</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="padding">
+	<div class="image-step">
+		<img src="../../assets/imgs/steps/wifi.PNG" width="200">
+	</div>
+	
+	<div class="instruction">
+		<p>Enter your WiFI SSID and password below.</p>
+		<ion-item lines="none">
+		  <ion-label position="floating">WiFi SSID</ion-label>
+		  <ion-input [(ngModel)]="ssid"></ion-input>
+		</ion-item>
+
+		<ion-item lines="none">
+		  <ion-label position="floating">WiFi Password</ion-label>
+		  <ion-input type="password" [(ngModel)]="password"></ion-input>
+		</ion-item>
+	</div>
+
+	<div class="button-container">
+		<ion-button (click)="gotoNxt()" color="dark">NEXT STEP</ion-button>
+	</div>
+</ion-content>

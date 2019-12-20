@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Questrial', sans-serif !important;
+}
+
+.button-register{
+	margin-top: 25px;
+	font-family: 'Questrial', sans-serif !important;
+}
+ion-toolbar{
+	--border-width: 0px !important;
+	font-family: 'Questrial', sans-serif !important;
+}
+
+ion-label,ion-back-button,ion-button,ion-input{
+	font-family: 'Questrial', sans-serif !important;
+}

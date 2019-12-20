@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Family Member</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="addMember()" color="dark"><strong>Done</strong></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-item lines="none">
+	  <ion-label position="fixed">Country</ion-label>
+	  <ion-text>Philippines +63</ion-text>
+	</ion-item>
+	<ion-item lines="none">
+	  <ion-label position="fixed">Name</ion-label>
+	  <ion-input [(ngModel)]="formData.name"></ion-input>
+	</ion-item>
+	<ion-item lines="none">
+	  <ion-label position="fixed">Account</ion-label>
+	  <ion-input placeholder="Email Address" [(ngModel)]="formData.email"></ion-input>
+	</ion-item>
+
+	<div class="padding">
+		<p>After being added, the family member can use the account to access the family. The family member can only perform operations on smart and devices.</p>
+	</div>
+</ion-content>

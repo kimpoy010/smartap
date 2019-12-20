@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Account Center</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item lines="none" (click)="changePhoto()">
+		  <ion-avatar slot="end">
+		    <img src="{{image}}">
+		  </ion-avatar>
+		  <ion-label>Item Avatar</ion-label>
+		</ion-item>
+		<ion-item lines="none">
+		  	<ion-label>Username</ion-label>
+		  	<ion-input slot="end" class="text-right" [(ngModel)]="username" (change)="changeUsername()"></ion-input>
+		</ion-item>
+		<ion-item-divider></ion-item-divider>
+		<ion-item lines="none">
+		  	<ion-label>Account and Security</ion-label>
+		</ion-item>
+		<ion-item-divider></ion-item-divider>
+		<ion-item lines="none">
+		  	<ion-label>Temperature Scale</ion-label>
+		  	<ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="temp">
+	  	      <ion-select-option value="C" selected>&#8451;</ion-select-option>
+	  	      <ion-select-option value="F">&#x2109;</ion-select-option>
+	  	    </ion-select>
+		</ion-item>
+		<ion-item lines="none">
+		  	<ion-label>Time Zone</ion-label>
+		  	<ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="timeZone">
+	  	      <ion-select-option value="Africa/Abidjan">Africa/Abidjan</ion-select-option>
+	  	      <ion-select-option value="Africa/Accra">Africa/Accra</ion-select-option>
+	  	      <ion-select-option value="Africa/Addis_Ababa">Africa/Addis_Ababa</ion-select-option>
+	  	      <ion-select-option value="Africa/Algiers">Africa/Algiers</ion-select-option>
+	  	      <ion-select-option value="Africa/Addis_Ababa">Africa/Addis_Ababa</ion-select-option>
+	  	      <ion-select-option value="Africa/Asmara">Africa/Asmara</ion-select-option>
+	  	      <ion-select-option value="Africa/Asmera">Africa/Asmera</ion-select-option>
+	  	      <ion-select-option value="Asia/Manila">Asia/Manila</ion-select-option>
+	  	    </ion-select>
+		</ion-item>
+		<ion-item-divider></ion-item-divider>
+		<ion-item lines="none" (click)="presentAlertConfirm()">
+		  	<ion-label>Deactivate Account</ion-label>
+		</ion-item>
+	</ion-list>
+</ion-content>

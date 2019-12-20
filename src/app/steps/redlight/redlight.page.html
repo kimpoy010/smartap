@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Confirm AP mode</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="padding">
+	<div class="image-step">
+		<img src="../../assets/imgs/steps/redlight.PNG">
+	</div>
+	
+	<div class="instruction">
+		<p>Red LED will blink rapidly under access point mode.</p>
+	</div>
+
+	<div class="button-container">
+		<ion-button (click)="gotoNxt()" color="dark">NEXT STEP</ion-button>
+	</div>
+</ion-content>

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+
+h1,h2,h3,h4,h5,h6,p,ion-back-button,ion-button,ion-title,ion-label,ion-input,ion-text{
+	font-family: 'Questrial', sans-serif !important;
+}
+
+ion-text{
+	font-size:14px; 
+}
+.switch{
+	text-align: center;
+	margin-top: 25%;
+	font-family: 'Questrial', sans-serif !important;
+}
+.sched-button{
+	margin-top: 25%;
+	font-family: 'Questrial', sans-serif !important;
+}
+
+.device-info{
+	text-align: center;
+	margin-top: 10%;
+	font-family: 'Questrial', sans-serif !important;
+}
+.state{
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-family: 'Questrial', sans-serif !important;
+}
+
+.small-text{
+	font-size: 14px;
+}
+.padding{
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 25px;
+}
+
+.answer{
+	padding: 15px;
+	font-family: 'Questrial', sans-serif !important;
+}
+
+.text-right{
+	text-align: right;
+}
