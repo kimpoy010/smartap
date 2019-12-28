@@ -17,10 +17,15 @@ export class LoginPage implements OnInit {
   constructor(private router:Router, public alertController:AlertController, private http: HTTP, public constant:ConstantsService) {
   	this.formData.email = "";
   	this.formData.password ="";
-    let userData = JSON.parse(localStorage.getItem('userData'));
-    if (userData !== null) {
-       this.router.navigate(['tabs/tabs']);
+    let userD = localStorage.getItem('userData');
+    console.log("used data: "+userD)
+    if (userD != null || userD != undefined || userD != '') {
+       let userData = JSON.parse(userD);
+       if (userData !== null ) {
+          this.router.navigate(['tabs/tabs']);
+       }
     }
+    
   }
 
   ngOnInit() {

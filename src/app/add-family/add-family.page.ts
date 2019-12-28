@@ -14,6 +14,7 @@ import { ConstantsService } from '../constants.service';
 })
 export class AddFamilyPage implements OnInit {
   public formData:any = {};
+  public returnData:any;
   constructor(public modalController: ModalController, private http: HTTP,public alertController:AlertController, public constant:ConstantsService) { 
 
   }
@@ -39,7 +40,8 @@ export class AddFamilyPage implements OnInit {
     .then(data => {
       //console.log(data);
       let dt = JSON.parse(data.data);
-      this.closeMe(data.data);
+      this.returnData = data.data
+      this.closeMe(this.returnData);
     })
     .catch(error => {
       let dt = JSON.parse(error.error);
@@ -55,6 +57,10 @@ export class AddFamilyPage implements OnInit {
       await this.modalController.dismiss(onClosedData);
     }
     
+  }
+
+  async closeModal(){
+     await this.modalController.dismiss();
   }
   
   async presentAlertConfirm(msg:string, title:string) {

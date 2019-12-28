@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 @Component({
   selector: 'app-help',
   templateUrl: './help.page.html',
@@ -7,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HelpPage implements OnInit {
 
-  constructor(public router:Router) { }
+  constructor(public router:Router,private iab: InAppBrowser) { }
 
   ngOnInit() {
   }
@@ -18,6 +20,10 @@ export class HelpPage implements OnInit {
 
   goToMessage(){
   	this.router.navigate(['message']);
+  }
+
+  openHelpCenter(){
+    const browser = this.iab.create('https://sakura-smart.com/','_system');
   }
 
 }

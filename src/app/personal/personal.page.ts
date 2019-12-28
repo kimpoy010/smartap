@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { HTTP } from '@ionic-native/http/ngx';
 
+import { Router, NavigationExtras } from '@angular/router';
+
 import { ConstantsService } from '../constants.service'
 import { AlertController } from '@ionic/angular';
 
@@ -18,7 +20,7 @@ export class PersonalPage implements OnInit {
 
   constructor(private camera: Camera,
   		private http:HTTP,
-  		private constant:ConstantsService,public alertController: AlertController) { 
+  		private constant:ConstantsService,public alertController: AlertController, private router:Router) { 
   		let photo = localStorage.getItem('avatar');
   		if (!photo) {
   			
@@ -57,6 +59,10 @@ export class PersonalPage implements OnInit {
 
   changeUsername(){
   	localStorage.setItem('username',this.username);
+  }
+
+  goToAccount(){
+    this.router.navigate(['security']);
   }
 
  async presentAlertConfirm() {

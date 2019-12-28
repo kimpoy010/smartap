@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="home.sakurasmart.www" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>SakuraSmart</name>
+<widget id="home.sakurasmart.www" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>SakuraSmartHome</name>
     <description>Sakura Smart Home app.</description>
     <author email="info@sakura-smart.com" href="http://sakura-smart.com/">Connect Plus Team</author>
     <content src="index.html" />

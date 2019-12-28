@@ -22,9 +22,10 @@ export class ConnectingPage implements OnInit {
   }
 
   async presentAlertConfirm() {
+      localStorage.setItem('device','1');
       const alert = await this.alertController.create({
-        header: "Ooops!",
-        message: 'No nearby devices found!Please try again!',
+        header: "Success!",
+        message: 'Device connected successfully!',
         buttons: [
           {
             text: 'Okay',

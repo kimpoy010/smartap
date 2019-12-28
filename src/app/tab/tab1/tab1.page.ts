@@ -15,8 +15,14 @@ export class Tab1Page implements OnInit {
     public rooms:any = [{}];
     public defaultFamilyID;
     public status:boolean;
+    public dev:string;
    	constructor(public router:Router, public constant:ConstantsService, public http:HTTP) {
       this.http.setRequestTimeout(10.0);
+      let d = localStorage.getItem('device');
+      if (d) {
+        this.dev = d;
+        console.log(this.dev);
+      }
       let id = JSON.parse(localStorage.getItem('userData')).id;
       this.http.get(this.constant.apiURL+'/api/get-user-info/'+id,{},{})
       .then(data => {
@@ -64,6 +70,11 @@ export class Tab1Page implements OnInit {
 
     doRefresh(event) {
       let id = JSON.parse(localStorage.getItem('userData')).id;
+      let d = localStorage.getItem('device');
+      if (d) {
+        this.dev = d;
+        console.log(this.dev);
+      }
       this.http.get(this.constant.apiURL+'/api/get-user-info/'+id,{},{})
       .then(data => {
         this.families = JSON.parse(data.data).families;

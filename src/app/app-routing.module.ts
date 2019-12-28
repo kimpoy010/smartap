@@ -127,6 +127,10 @@ const routes: Routes = [
   {
     path: 'single-faq',
     loadChildren: () => import('./single-faq/single-faq.module').then( m => m.SingleFAQPageModule)
+  },
+  {
+    path: 'security',
+    loadChildren: () => import('./security/security.module').then( m => m.SecurityPageModule)
   }
   
 ];

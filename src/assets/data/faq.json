@@ -4,16 +4,20 @@
 		"answer" : "Please note when adding device: <br><br><br>1. Is the device powered on?<br><br>2. Is the device in Access Point (AP) mode? 3. Are you connected to the device's Acces Point?<br><br> 4. The wifi SSID and Password supplied are correct<br><br>5. Make sure you are connecting to the 2.4GHz wifi signal of your router.<br><br>6. Make sure DHCP is eanabled on the router"
 	},
 	{
-		"question" : "How to add device on app?",
-		"answer" : ""
+		"question" : "Can I control my devices individually?",
+		"answer" : "Yes, you can control your devices individually with your smartphone with the Sakura Smart Home App."
 	},
 	{
-		"question" :"How to share the device to family members?",
-		"answer" : ""
+		"question" :"What other products works with the Sakura Smart home app?",
+		"answer" : "As of now, we currently only have Smart plugs, but Sakura Smart Switch will be launching soon. We also plan to release more smart products in the future."
 	},
 	{
-		"question" : "How to connect to Google Home and Alexa Echo Dot speakers?",
-		"answer" : ""
+		"question" : "How do I connect a new device to the Sakura Smart Home app?",
+		"answer" : "Long press the button on the device until the LED blinks rapildy. Connect to the device's hotspot (only compatible with 2.4GHz WiFi signal) and follow the on-screen instructions in the app."
+	},
+	{
+		"question" : "How do I add a new home to my account?",
+		"answer" : "Go to App Settings > Family Management > Add New Family"
 	}
 	
 ]

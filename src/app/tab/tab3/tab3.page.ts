@@ -56,7 +56,7 @@ export class Tab3Page implements OnInit {
     }
     
   logout(){
-  	localStorage.setItem('userData','');
+  	localStorage.removeItem('userData');
     this.router.navigate(['home']);
   }
 

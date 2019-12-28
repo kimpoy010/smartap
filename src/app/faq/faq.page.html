@@ -8,6 +8,9 @@
 </ion-header>
 
 <ion-content>
+	<ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+	    <ion-refresher-content></ion-refresher-content>
+	</ion-refresher>
 	<ion-list>
 		<ion-item *ngFor="let q of questions; let i = index" lines="none" (click)="goToFAQ(i)">
 			<ion-label>{{q.question}}</ion-label>

@@ -31,6 +31,14 @@ export class FaqPage implements OnInit {
   	this.router.navigate(['single-faq'],navigationExtras);
   }
 
+  doRefresh(event) {
+    this.http.get("../../assets/data/faq.json",{},{}).then(data=>{
+      this.questions = JSON.parse(data.data);
+      event.target.complete();
+    }).catch(err=>{
+
+    })
+  }
 
 
 }

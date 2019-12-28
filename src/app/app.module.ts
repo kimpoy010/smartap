@@ -18,6 +18,7 @@ import {RoomAssignmentPageModule} from './room-assignment/room-assignment.module
 import { Camera } from '@ionic-native/camera/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { HTTP } from '@ionic-native/http/ngx';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ConstantsService } from './constants.service';
@@ -47,7 +48,8 @@ import { ConstantsService } from './constants.service';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     ConstantsService,
-    Camera
+    Camera,
+    InAppBrowser
   ],
   bootstrap: [AppComponent]
 })
